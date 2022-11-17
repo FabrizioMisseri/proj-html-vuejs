@@ -1,11 +1,7 @@
 @import "./partials/variables.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 
-// RESET 
-* {
-    margin: 0;
-    box-sizing: border-box;
-    padding: 0%;
-}
+// RESET
 
 html {
     font-size: 100%;
@@ -21,6 +17,6 @@ ul {
 
 // COMMON
 
-.container {
+.my_container {
     margin: 0 auto;
 }

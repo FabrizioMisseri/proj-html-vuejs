@@ -1,13 +1,13 @@
 <script>
 export default {
-    name: "appFooter",
+    name: "headerJumbo",
 }
+
 </script>
 
 <template>
     <div>
-        FOOTER
-
+        head jumbo
     </div>
 </template>
 
