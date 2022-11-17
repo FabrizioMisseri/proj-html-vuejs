@@ -1,0 +1,26 @@
+@import "./partials/variables.scss";
+
+// RESET 
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0%;
+}
+
+html {
+    font-size: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+// COMMON
+
+.container {
+    margin: 0 auto;
+}
