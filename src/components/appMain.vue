@@ -1,17 +1,24 @@
 <script>
+import appBanners from './mainComps/appBanners.vue';
+import appInners from './mainComps/appInners.vue';
+
 export default {
     name: "appMain",
+
+    components: {
+        appBanners,
+        appInners,
+    }
 }
 </script>
 
 <template>
     <div>
-
+        <appBanners />
+        <appInners />
         MAIN
     </div>
     <!-- 
-    appBanners
-    appInners
     pizzaSpecials
     pizzaBuilder
     testimonialSection
