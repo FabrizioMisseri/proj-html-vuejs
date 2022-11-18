@@ -4,6 +4,7 @@ import appInners from './mainComps/appInners.vue';
 import pizzaSpecials from './mainComps/pizzaSpecials.vue';
 import pizzaBuilder from './mainComps/pizzaBuilder.vue';
 import testimonialSection from './mainComps/testimonialSection.vue';
+import partnerSection from './mainComps/partnerSection.vue';
 
 export default {
     name: "appMain",
@@ -14,6 +15,7 @@ export default {
         pizzaSpecials,
         pizzaBuilder,
         testimonialSection,
+        partnerSection,
     }
 }
 </script>
@@ -25,10 +27,9 @@ export default {
         <pizzaSpecials />
         <pizzaBuilder />
         <testimonialSection />
-        MAIN
+        <partnerSection />
     </div>
     <!-- 
-    clientSection
     appProducts
     pizzaDeals
     appForm

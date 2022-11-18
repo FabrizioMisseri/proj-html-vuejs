@@ -29,8 +29,7 @@ export default {
 <style lang="scss" scoped>
 .container {
     margin-top: .3rem;
-    // debug
-    height: 300px;
+
 
     .box {
         width: 25%;
