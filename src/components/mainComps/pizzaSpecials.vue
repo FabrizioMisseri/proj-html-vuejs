@@ -90,6 +90,7 @@ export default {
 
 .container {
     width: 100%;
+    padding: .3rem 0;
     // debug
     min-height: 500px;
 

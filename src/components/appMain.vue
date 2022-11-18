@@ -3,6 +3,7 @@ import appBanners from './mainComps/appBanners.vue';
 import appInners from './mainComps/appInners.vue';
 import pizzaSpecials from './mainComps/pizzaSpecials.vue';
 import pizzaBuilder from './mainComps/pizzaBuilder.vue';
+import testimonialSection from './mainComps/testimonialSection.vue';
 
 export default {
     name: "appMain",
@@ -12,6 +13,7 @@ export default {
         appInners,
         pizzaSpecials,
         pizzaBuilder,
+        testimonialSection,
     }
 }
 </script>
@@ -22,12 +24,10 @@ export default {
         <appInners />
         <pizzaSpecials />
         <pizzaBuilder />
+        <testimonialSection />
         MAIN
     </div>
     <!-- 
-    pizzaSpecials
-    pizzaBuilder
-    testimonialSection
     clientSection
     appProducts
     pizzaDeals
