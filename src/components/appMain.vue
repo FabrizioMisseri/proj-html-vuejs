@@ -5,6 +5,7 @@ import pizzaSpecials from './mainComps/pizzaSpecials.vue';
 import pizzaBuilder from './mainComps/pizzaBuilder.vue';
 import testimonialSection from './mainComps/testimonialSection.vue';
 import partnerSection from './mainComps/partnerSection.vue';
+import appProducts from './mainComps/appProducts.vue';
 
 export default {
     name: "appMain",
@@ -16,6 +17,7 @@ export default {
         pizzaBuilder,
         testimonialSection,
         partnerSection,
+        appProducts,
     }
 }
 </script>
@@ -28,6 +30,7 @@ export default {
         <pizzaBuilder />
         <testimonialSection />
         <partnerSection />
+        <appProducts />
     </div>
     <!-- 
     appProducts
