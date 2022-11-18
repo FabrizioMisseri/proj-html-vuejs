@@ -33,6 +33,7 @@ export default {
 .container {
     width: 100%;
     position: relative;
+    background-color: $color-inners-bg;
 
     .item-bg {
         width: 100%;
@@ -40,7 +41,7 @@ export default {
         background-repeat: no-repeat;
         background-size: 30%;
         background-position: center;
-        filter: opacity(0.20);
+        filter: opacity(0.10);
         // debug
         min-height: 300px;
     }
