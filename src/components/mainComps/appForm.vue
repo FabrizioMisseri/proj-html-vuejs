@@ -53,7 +53,7 @@ export default {
 @use "../../styles/partials/variables" as *;
 
 section {
-    padding: .5rem 0;
+    margin: .3rem 0;
     background-image: url(../../assets/imgs/img/h3-background-img-3.jpg);
     background-size: cover;
     // debug 
