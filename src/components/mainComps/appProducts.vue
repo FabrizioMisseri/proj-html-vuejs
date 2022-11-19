@@ -9,7 +9,7 @@ export default {
     <section>
 
         <div class="container">
-            <p class="flavour-text mb-1">
+            <p class="flavour-text small-size mb-1">
                 CHOOSE YOUR FLAVOUR
             </p>
             <h2>
@@ -39,7 +39,6 @@ section {
     text-align: center;
 
     .flavour-text {
-        font-size: $small-size;
         color: $color-brown;
     }
 

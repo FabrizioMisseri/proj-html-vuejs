@@ -59,7 +59,7 @@ export default {
 
                 <li>
                     <a href="">
-                        <span class="search-len">
+                        <span class="search-len small-size">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </span>
                         <span>
@@ -118,9 +118,7 @@ export default {
         }
     }
 
-    .search-len {
-        font-size: $small-size;
-    }
+
 
 }
 </style>

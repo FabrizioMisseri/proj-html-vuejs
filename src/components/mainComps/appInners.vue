@@ -18,7 +18,7 @@ export default {
             <p>
                 1 FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLES PIZZA SLICE IN NAPLES
             </p>
-            <p class="small">
+            <p class="small small-size">
                 WHASHINGTON POST 2018
             </p>
         </div>
@@ -55,7 +55,7 @@ export default {
         color: $color-inner;
 
         .small {
-            font-size: $small-size;
+
             color: red;
         }
 

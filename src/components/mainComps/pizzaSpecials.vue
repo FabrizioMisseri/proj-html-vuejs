@@ -148,8 +148,4 @@ export default {
         }
     }
 }
-
-.small-size {
-    font-size: $small-size;
-}
 </style>
