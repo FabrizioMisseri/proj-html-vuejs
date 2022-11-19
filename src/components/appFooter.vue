@@ -1,6 +1,19 @@
 <script>
+import footerCard from './footerComps/footerCard.vue';
+import { store } from "../store";
+
 export default {
     name: "appFooter",
+
+    components: {
+        footerCard,
+    },
+
+    data() {
+        return {
+            store,
+        }
+    }
 }
 </script>
 
@@ -8,24 +21,36 @@ export default {
     <footer class="flex">
 
         <!-- SECTION SX -->
-        <section class="sx small-size">
+        <section class="sx">
             <!-- BG-IMG -->
             <figure></figure>
 
             <!-- TOP CONTAINER-->
-            <div class="container">
+            <div class="container just-between">
 
                 <!-- COLUMN SX -->
-                <div class="column">ciao</div>
+                <div class="column">
+                    <h4 class="color-gold">
+                        FIND OUR RESTAURANTS
+                    </h4>
+                    <footerCard v-for="(restaurant, index) in this.store.arrayRestaurants" :key="index"
+                        :element="restaurant" class="small-size" />
+                </div>
                 <!-- COLUMN SX -->
 
                 <!-- COLUMN CENTER -->
-                <div class="column">ciao</div>
+                <div class="column">
+                    <h4 class="color-gold">
+                        WORKING HOURS
+                    </h4>
+                    <footerCard v-for="(turn, index) in this.store.workingHours" :key="index" :element="turn"
+                        class="small-size" />
+                </div>
                 <!-- COLUMN CENTER -->
 
                 <!-- COLUMN DX -->
                 <div class="column">
-                    <h3 class="big-size">
+                    <h3>
                         THE DON PEPPE CREW FIRST AND FOREMOST VALUES AN AUTHENTIC, WELL BACKED SLICE OF PIZZA.
                     </h3>
                 </div>
@@ -99,6 +124,8 @@ footer {
     .sx {
         position: relative;
         padding-top: 5rem;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -118,8 +145,7 @@ footer {
         }
 
         .column {
-            width: calc(100% / 3);
-            padding: 0 1rem;
+            width: calc((100% / 3) - 30px);
 
         }
     }
@@ -127,6 +153,8 @@ footer {
 
 }
 
+
+// COLORS
 .color-gold {
     color: $footer-gold;
 }
@@ -137,5 +165,9 @@ footer {
 
 .color-aqua {
     color: $footer-aqua;
+}
+
+.color-gray {
+    color: gray;
 }
 </style>
