@@ -19,21 +19,17 @@ export default {
 <template>
     <section class="container flex just-center">
 
-        <div class="btn left" @click="$emit('btnPrevClicked')">
-            <span>
-                PREV
-            </span>
-        </div>
+        <small class="btn left small-size" @click="$emit('btnPrevClicked')">
+            PREV
+        </small>
 
         <div>
             <img :src="getImageUrl(pizza[pizzaSelector])" alt="">
         </div>
 
-        <div class="btn right" @click="$emit('btnNextClicked')">
-            <span>
-                NEXT
-            </span>
-        </div>
+        <small class="btn right small-size" @click="$emit('btnNextClicked')">
+            NEXT
+        </small>
 
     </section>
 </template>
@@ -47,22 +43,27 @@ export default {
 
     .btn {
         cursor: pointer;
-        position: absolute;
         background-color: white;
-        padding: 1rem;
-        border-radius: 100%;
+        position: absolute;
+        top: 30%;
+        padding: 0.5rem 1rem 2rem;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+
+
 
         &.left {
-            top: 50%;
             left: 0;
-            transform: rotate(90deg);
+            transform: rotate(90deg) translate(+50%, +50%);
+            transform-origin: bottom left;
         }
 
         &.right {
-            top: 50%;
             right: 0;
-            transform: rotate(270deg);
+            transform: rotate(-90deg) translate(-50%, +50%);
+            transform-origin: bottom right;
         }
     }
 }
 </style>
+

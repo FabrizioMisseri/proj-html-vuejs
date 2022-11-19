@@ -139,7 +139,7 @@ footer {
             position: absolute;
             left: 0;
             top: 0;
-            filter: opacity(80%);
+            filter: opacity(90%);
             background-image: url(../assets/imgs/img/starway-to-heaven.jpg);
 
         }
