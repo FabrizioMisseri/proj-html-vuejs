@@ -7,6 +7,7 @@ import testimonialSection from './mainComps/testimonialSection.vue';
 import partnerSection from './mainComps/partnerSection.vue';
 import appProducts from './mainComps/appProducts.vue';
 import pizzaDeals from './mainComps/pizzaDeals.vue';
+import appForm from './mainComps/appForm.vue';
 
 export default {
     name: "appMain",
@@ -20,6 +21,7 @@ export default {
         partnerSection,
         appProducts,
         pizzaDeals,
+        appForm,
     }
 }
 </script>
@@ -34,10 +36,9 @@ export default {
         <partnerSection />
         <appProducts />
         <pizzaDeals />
+        <appForm />
     </div>
-    <!-- 
-    appForm
- -->
+
 </template>
 
 <style lang="scss" scoped>

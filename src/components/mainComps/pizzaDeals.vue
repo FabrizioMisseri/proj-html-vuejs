@@ -6,7 +6,7 @@ export default {
 
 <template>
 
-    <section class="container flex">
+    <section class="container flex align-start">
         <!-- SX -->
         <div class="box sx">
             <div class="item">
@@ -105,7 +105,7 @@ export default {
     }
 
     .sx {
-        padding-top: 2rem;
+        padding: 2rem 0;
         display: flex;
         justify-content: center;
         background-image: url(../../assets/imgs/img/starway-to-heaven.jpg);
