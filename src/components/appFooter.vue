@@ -45,6 +45,15 @@ export default {
                     </h4>
                     <footerCard v-for="(turn, index) in this.store.workingHours" :key="index" :element="turn"
                         class="small-size" />
+                    <p class="follow-us small-size">
+                        <span class="color-gold">FOLLOW US: </span>
+                        <span>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </span>
+                    </p>
                 </div>
                 <!-- COLUMN CENTER -->
 
@@ -60,13 +69,21 @@ export default {
             <!-- TOP CONTAINER-->
 
             <!-- BOTTOM -->
-            <div class="container bottom">
-                <span class="color-gold">
-                    Created with love by
-                </span>
-                <span class="color-aqua ml-1">
-                    Qode interactive
-                </span>
+            <div class="container bottom flex just-between align-end">
+                <!-- sx -->
+                <div>
+                    <span class="color-gold">
+                        Created with love by
+                    </span>
+                    <span class="color-aqua ml-1">
+                        Qode interactive
+                    </span>
+                </div>
+
+                <!-- dx -->
+                <div>
+                    <img src="../assets/imgs/img/h5-logo-divided-header.png" alt="">
+                </div>
             </div>
             <!-- BOTTOM -->
 
@@ -80,7 +97,6 @@ export default {
         <section class="dx">
 
 
-
         </section>
         <!-- / SECTION DX -->
 
@@ -92,9 +108,7 @@ export default {
 
 footer {
     width: 100%;
-    // debug
     min-height: 600px;
-    // debug
     color: white;
 
     .container {
@@ -103,6 +117,10 @@ footer {
 
         &.bottom {
             padding: 3rem 0;
+
+            img {
+                max-width: 120px;
+            }
         }
     }
 
@@ -147,6 +165,14 @@ footer {
         .column {
             width: calc((100% / 3) - 30px);
 
+            .follow-us {
+                margin-top: 1.8rem;
+                font-weight: 600;
+
+                i {
+                    margin: 0 .15rem;
+                }
+            }
         }
     }
 
