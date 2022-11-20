@@ -9,7 +9,7 @@ export default {
 
 <template>
 
-    <section class="container flex just-around">
+    <section class="container flex just-between">
 
         <div class="box">
             <img src="../../assets/imgs/img/h3-img-1.jpg" alt="">
@@ -37,7 +37,7 @@ export default {
     padding: .3rem 0;
 
     .box {
-        width: calc((100% / 4) - .4rem);
+        width: calc((100% / 4) - (0.9rem / 4));
 
         img {
             display: block;
