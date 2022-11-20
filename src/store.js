@@ -194,7 +194,7 @@ export const store = reactive({
             monthEvent: "NOV",
         },
         {
-            nameEvent: "TERRAZZA PATIO APERITIF HOUR WITH MAURO",
+            nameEvent: "TERRAZZA PATIO APERITIF WITH MAURO",
             mapPoint: "204 E. Pizzetta Tommasino",
             dayEvent: "03",
             monthEvent: "NOV",

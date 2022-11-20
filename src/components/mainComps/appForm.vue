@@ -1,6 +1,27 @@
 <script>
+import { clientsBookingStore } from "../../clientsBookingStore";
+
 export default {
     name: "appForm",
+
+    data() {
+        return {
+            clientsBookingStore,
+        }
+    },
+
+    methods: {
+        saveOrder() {
+            this.clientsBookingStore.clientReservation.reservationName = prompt("Prenotazione a nome di: ");
+            this.clientsBookingStore.bookingArray.push(this.clientsBookingStore.clientReservation);
+            this.clientsBookingStore.clientReservation = {
+                reservationName: "",
+                personNumber: 0,
+                date: "",
+                clock: "",
+            };
+        }
+    }
 }
 </script>
 
@@ -15,7 +36,8 @@ export default {
 
                 <!-- PERSON -->
                 <div class="large-block">
-                    <input type="number" placeholder="1 person">
+                    <input type="number" placeholder="1 person"
+                        v-model="this.clientsBookingStore.clientReservation.personNumber">
                 </div>
                 <div class="small-block">
                     <span>FOR</span>
@@ -23,7 +45,7 @@ export default {
 
                 <!-- DATE -->
                 <div class="large-block">
-                    <input type="date">
+                    <input type="date" v-model="this.clientsBookingStore.clientReservation.date">
                 </div>
                 <div class="small-block">
                     <span>AT</span>
@@ -31,17 +53,21 @@ export default {
 
                 <!-- CLOCK -->
                 <div class="large-block">
-                    <input type="time">
+                    <input type="time" v-model="this.clientsBookingStore.clientReservation.clock">
                 </div>
                 <div class="small-block">
                 </div>
 
                 <!-- BTN SUBMIT -->
                 <div class="large-block">
-                    <button class="btn" type="submit">BOOK A TABLE</button>
+                    <button class="btn" type="submit" @click="this.saveOrder()">BOOK A TABLE</button>
                 </div>
             </div>
             <!-- / FORM -->
+
+            <p class="small-size">
+                powered by me*
+            </p>
 
         </div>
 
@@ -56,7 +82,6 @@ section {
     margin: .3rem 0;
     background-image: url(../../assets/imgs/img/h3-background-img-3.jpg);
     background-size: cover;
-    // debug 
     min-height: 150px;
 }
 
@@ -70,7 +95,8 @@ section {
 
         input,
         .btn {
-            padding: .7rem;
+            height: 50px;
+            padding: .6rem;
         }
 
         input {
@@ -91,7 +117,7 @@ section {
     .small-block {
         width: calc(100% / 15);
         text-align: center;
-        padding: .7rem 0;
+        line-height: 50px;
     }
 }
 </style>
