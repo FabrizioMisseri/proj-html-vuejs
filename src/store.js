@@ -92,6 +92,24 @@ export const store = reactive({
         },
     ],
 
+    specialComponents: [
+        {
+            name: "COMBO PICCOLO",
+            text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Repellendus, maxime Sunt libero ratione, provident unde aspernatur velit consequatur doloremque.",
+            price: "10$",
+        },
+        {
+            name: "COMBO MEZZO",
+            text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Repellendus, maxime Sunt libero ratione, provident unde aspernatur velit consequatur doloremque.",
+            price: "20$",
+        },
+        {
+            name: "COMBO GRANDE",
+            text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit Repellendus, maxime Sunt libero ratione, provident unde aspernatur velit consequatur doloremque.",
+            price: "30$",
+        },
+    ],
+
     arrayRestaurants: [
         {
             id: 0,

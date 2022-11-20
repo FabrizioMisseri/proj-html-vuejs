@@ -2,6 +2,9 @@
 export default {
     name: "pizzaSpecials",
 
+    props: {
+        specialComponents: Array,
+    }
 }
 </script>
 
@@ -28,53 +31,21 @@ export default {
                     similique.
                 </P>
 
-                <div class="small-item">
+                <!-- SPECIAL SMALL-ITEM -->
+                <div class="small-item" v-for="(special, index) in specialComponents" :key="index">
                     <div class="price-tag">
                         <span>
-                            10$
+                            {{ special.price }}
                         </span>
                     </div>
                     <div class="description-tag">
-                        <h4>COMBO PICCOLO</h4>
+                        <h4>{{ special.name }}</h4>
                         <span class="small-size">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Repellendus,
-                            maxime? Sunt libero ratione, provident unde aspernatur velit consequatur doloremque,
+                            {{ special.text }}
                         </span>
                     </div>
                 </div>
-
-                <div class="small-item">
-                    <div class="price-tag">
-                        <span>
-                            10$
-                        </span>
-                    </div>
-                    <div class="description-tag">
-                        <h4>COMBO MEZZO</h4>
-                        <span class="small-size">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Repellendus,
-                            maxime? Sunt libero ratione, provident unde aspernatur velit consequatur doloremque,
-                        </span>
-                    </div>
-                </div>
-
-                <div class="small-item">
-                    <div class="price-tag">
-                        <span>
-                            10$
-                        </span>
-                    </div>
-                    <div class="description-tag">
-                        <h4>COMBO GRANDE</h4>
-                        <span class="small-size">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Repellendus,
-                            maxime? Sunt libero ratione, provident unde aspernatur velit consequatur doloremque,
-                        </span>
-                    </div>
-                </div>
+                <!-- / SPECIAL SMALL-ITEM -->
 
             </div>
 

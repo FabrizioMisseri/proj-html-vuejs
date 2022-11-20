@@ -49,7 +49,7 @@ export default {
         <appBanners />
         <appInners :innerSelector="this.store.innerSelector" :innersArray="this.store.innersArray"
             @btnPrevClicked="this.prevStepInner()" @btnNextClicked="this.nextStepInner()" />
-        <pizzaSpecials />
+        <pizzaSpecials :specialComponents="this.store.specialComponents" />
         <pizzaBuilder />
         <testimonialSection />
         <partnerSection />
