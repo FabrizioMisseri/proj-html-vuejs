@@ -8,6 +8,8 @@ import partnerSection from './mainComps/partnerSection.vue';
 import appProducts from './mainComps/appProducts.vue';
 import pizzaDeals from './mainComps/pizzaDeals.vue';
 import appForm from './mainComps/appForm.vue';
+import { store } from "../store";
+
 
 export default {
     name: "appMain",
@@ -22,14 +24,31 @@ export default {
         appProducts,
         pizzaDeals,
         appForm,
-    }
+    },
+
+    data() {
+        return {
+            store,
+        }
+    },
+
+    methods: {
+        prevStepInner() {
+            this.store.innerSelector > 0 ? this.store.innerSelector-- : this.store.innerSelector = this.store.innersArray.length - 1;
+        },
+
+        nextStepInner() {
+            this.store.innerSelector < this.store.innersArray.length - 1 ? this.store.innerSelector++ : this.store.innerSelector = 0;
+        },
+    },
 }
 </script>
 
 <template>
     <div>
         <appBanners />
-        <appInners />
+        <appInners :innerSelector="this.store.innerSelector" :innersArray="this.store.innersArray"
+            @btnPrevClicked="this.prevStepInner()" @btnNextClicked="this.nextStepInner()" />
         <pizzaSpecials />
         <pizzaBuilder />
         <testimonialSection />

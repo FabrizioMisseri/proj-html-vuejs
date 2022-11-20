@@ -25,7 +25,7 @@ export default {
         nextStepJumbotron() {
             this.store.pizzaSelector > 0 ? this.store.pizzaSelector-- : this.store.pizzaSelector = this.store.pizzArray.length - 1;
         },
-    }
+    },
 }
 </script>
 

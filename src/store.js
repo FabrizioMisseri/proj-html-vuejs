@@ -3,10 +3,34 @@ import { reactive } from "vue";
 export const store = reactive({
 
     pizzaSelector: 0,
+
+    innerSelector: 0,
+
     pizzArray: [
         "../../assets/imgs/img/h3-rev-img-2.png",
         "../../assets/imgs/img/h3-rev-img-4.png",
         "../../assets/imgs/img/h3-rev-img-6.png",
+    ],
+
+    innersArray: [
+
+        {
+            id: 0,
+            text: "1 FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLES PIZZA SLICE IN NAPLES",
+            dailyBugle: "WHASHINGTON POST 2018",
+        },
+
+        {
+            id: 1,
+            text: "2 FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLES PIZZA SLICE IN NAPLES lorem ipsum",
+            dailyBugle: "WHASHINGTON POST 2020",
+        },
+
+        {
+            id: 2,
+            text: "3 FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLES PIZZA SLICE IN NAPLES ipsum lorem",
+            dailyBugle: "WHASHINGTON POST 2022",
+        },
     ],
 
     navComponents: [

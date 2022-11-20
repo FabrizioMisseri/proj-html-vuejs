@@ -2,26 +2,50 @@
 export default {
     name: "appInners",
 
-
+    props: {
+        innerSelector: Number,
+        innersArray: Array,
+    }
 }
 </script>
 
 <template>
 
-    <section class="container">
+    <section class="container flex align-center just-center">
 
-        <div class="item-bg">
+        <!-- BTNS PREV NEXT -->
+        <span class="btn left small-size" @click="$emit('btnPrevClicked')">
+            PREV
+        </span>
 
+        <span class="btn right small-size" @click="$emit('btnNextClicked')">
+            NEXT
+        </span>
+        <!-- / BTNS PREV NEXT -->
+
+        <!-- img bg -->
+        <div class="item-bg flex align-center just-center">
+            <img src="../../assets/imgs/img/h3-rev-img-5.png" alt="">
         </div>
+        <!-- / img bg -->
 
-        <div class="item">
+        <!-- INNER SLIDER -->
+        <div class=" item">
+            <div class="dynamic-item mb-1" v-for="(inner, index) in innersArray" :key="index">
+                <p v-if="innerSelector === inner.id">
+                    {{ inner.text }}
+                </p>
+                <p v-if="innerSelector === inner.id" class="small small-size">
+                    {{ inner.dailyBugle }}
+                </p>
+            </div>
+
             <p>
-                1 FORGET THE TRENDY PIZZA SHOPS, THIS HIDDEN SPOT MAKES THE BEST NEW YORK-STYLES PIZZA SLICE IN NAPLES
-            </p>
-            <p class="small small-size">
-                WHASHINGTON POST 2018
+                <span v-for="n in 3" class="dot" :class="(innerSelector + 1) === n ? 'active' : ''"></span>
             </p>
         </div>
+        <!-- / INNER SLIDER -->
+
 
     </section>
 
@@ -33,30 +57,80 @@ export default {
 .container {
     width: 100%;
     position: relative;
+    z-index: 0;
     background-color: $color-inners-bg;
+    min-height: 300px;
 
-    .item-bg {
-        width: 100%;
-        background-image: url(../../assets/imgs/img/h3-rev-img-5.png);
-        background-repeat: no-repeat;
-        background-size: 30%;
-        background-position: center;
-        filter: opacity(0.10);
-        // debug
-        min-height: 300px;
+    //BTNS
+    .btn {
+        cursor: pointer;
+        background-color: white;
+        position: absolute;
+        top: 0;
+        padding: 0.5rem 1rem 2rem;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        color: $color-btns-prev-next;
+        font-weight: 600;
+        z-index: 2;
+
+
+
+        &.left {
+            left: 0;
+            transform: rotate(90deg) translate(+50%, +50%);
+            transform-origin: bottom left;
+        }
+
+        &.right {
+            right: 0;
+            transform: rotate(-90deg) translate(-50%, +50%);
+            transform-origin: bottom right;
+        }
     }
 
-    .item {
+    //BTNS
+
+
+    //IMG BACKGROUND
+    .item-bg {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        filter: opacity(0.2);
+
+        img {
+            width: 30%;
+        }
+    }
+
+    //IMG BACKGROUND
+
+
+    //SLIDER
+    .item {
         font-weight: 600;
         color: $color-inner;
+        z-index: 2;
 
         .small {
-
             color: red;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            background-color: $color-dark-gray;
+            margin: 0 .2rem;
+
+            &.active {
+                background-color: $color-gold;
+            }
         }
 
     }
@@ -67,5 +141,9 @@ export default {
         margin: .5rem auto;
         text-align: center;
     }
+
+    //SLIDER
+
+
 }
 </style>
