@@ -1,6 +1,10 @@
 <script>
 export default {
     name: "pizzaDeals",
+
+    props: {
+        arrayDeals: Array,
+    }
 }
 </script>
 
@@ -25,56 +29,23 @@ export default {
                 <!-- TEXT CONTENT -->
                 <div class="content">
                     <ul>
-                        <!-- 1 block -->
-                        <li class="flex">
+
+                        <li class="flex" v-for="(deal, index) in arrayDeals" :key="index">
                             <div class="data">
-                                <p class="huge-size brown-font">02</p>
-                                <p>NOV</p>
+                                <p class="huge-size brown-font">{{ deal.dayEvent }}</p>
+                                <p>{{ deal.monthEvent }}</p>
                             </div>
                             <div class="event">
                                 <p class="mb-1">
-                                    TERRAZZA PATIO DINING SPACE OPENING THIS WEEKEND
+                                    {{ deal.nameEvent }}
                                 </p>
                                 <p class="brown-font small-size">
                                     <span><i class="fa-solid fa-location-dot"></i></span>
-                                    <span>204 pizzetta Tommasino ecc...</span>
+                                    <span>{{ deal.mapPoint }}</span>
                                 </p>
                             </div>
                         </li>
 
-                        <!-- 2 block -->
-                        <li class="flex">
-                            <div class="data">
-                                <p class="huge-size brown-font">02</p>
-                                <p>NOV</p>
-                            </div>
-                            <div class="event">
-                                <p class="mb-1">
-                                    TERRAZZA PATIO DINING SPACE OPENING THIS WEEKEND
-                                </p>
-                                <p class="brown-font small-size">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>
-                                    <span>204 pizzetta Tommasino ecc...</span>
-                                </p>
-                            </div>
-                        </li>
-
-                        <!-- 3 block -->
-                        <li class="flex">
-                            <div class="data">
-                                <p class="huge-size brown-font">02</p>
-                                <p>NOV</p>
-                            </div>
-                            <div class="event">
-                                <p class="mb-1">
-                                    TERRAZZA PATIO DINING SPACE OPENING THIS WEEKEND
-                                </p>
-                                <p class="brown-font small-size">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>
-                                    <span>204 pizzetta Tommasino ecc...</span>
-                                </p>
-                            </div>
-                        </li>
                     </ul>
                 </div>
                 <!-- / TEXT CONTENT -->
@@ -83,10 +54,11 @@ export default {
         </div>
         <!-- / SX -->
 
-
+        <!-- DX -->
         <div class="box dx">
             <img src="../../assets/imgs/img/h3-img-5a.jpg" alt="">
         </div>
+        <!-- / DX -->
 
     </section>
 
@@ -119,7 +91,7 @@ export default {
 
             li {
                 padding: 2rem 0;
-                border-bottom: 1px dashed $color-pizzaDeals;
+                border-bottom: 1px dashed $color-gold;
 
                 &:last-child {
                     border-bottom: 0;

@@ -186,4 +186,25 @@ export const store = reactive({
         },
     ],
 
+    arrayDeals: [
+        {
+            nameEvent: "TRADITIONAL NEAPOLITAN PIES IN KYOTO PIZZA MERCATO",
+            mapPoint: "204 E. Pizzetta Tommasino",
+            dayEvent: "02",
+            monthEvent: "NOV",
+        },
+        {
+            nameEvent: "TERRAZZA PATIO APERITIF HOUR WITH MAURO",
+            mapPoint: "204 E. Pizzetta Tommasino",
+            dayEvent: "03",
+            monthEvent: "NOV",
+        },
+        {
+            nameEvent: "SIENNA PRIVATE DINING ROOM WITH FABRIZIO MISSERI",
+            mapPoint: "204 E. Pizzetta Tommasino",
+            dayEvent: "05",
+            monthEvent: "NOV",
+        },
+    ],
+
 });

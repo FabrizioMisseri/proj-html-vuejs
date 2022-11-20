@@ -54,7 +54,7 @@ export default {
         <testimonialSection />
         <partnerSection />
         <appProducts :pizzaProducts="this.store.pizzaProducts" />
-        <pizzaDeals />
+        <pizzaDeals :arrayDeals="this.store.arrayDeals" />
         <appForm />
     </div>
 
