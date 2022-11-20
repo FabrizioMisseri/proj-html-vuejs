@@ -53,7 +53,7 @@ export default {
         <pizzaBuilder />
         <testimonialSection />
         <partnerSection />
-        <appProducts />
+        <appProducts :pizzaProducts="this.store.pizzaProducts" />
         <pizzaDeals />
         <appForm />
     </div>

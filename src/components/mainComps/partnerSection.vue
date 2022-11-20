@@ -42,7 +42,7 @@ section {
 
     .container {
         width: 70%;
-        height: 250px;
+        min-height: 250px;
 
 
         .box {

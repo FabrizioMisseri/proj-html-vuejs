@@ -23,7 +23,6 @@ export default {
     width: 100%;
     color: white;
     position: relative;
-    // debug
     background-image: url(../../assets/imgs/img/h3-background-img.jpg);
     background-size: cover;
     background-repeat: no-repeat;

@@ -156,4 +156,37 @@ export const store = reactive({
         },
     ],
 
+    pizzaProducts: [
+        {
+            name: "BISMARK",
+            price: "30,00$",
+            imgPath: "../../assets/imgs/img/h3-product-img-1a-100x100.png",
+        },
+        {
+            name: "FIORI DI ZUCCA",
+            price: "7,00$ - 50,00$",
+            imgPath: "../../assets/imgs/img/h3-product-img-2a-150x150.png",
+        },
+        {
+            name: "VALDOSTANA",
+            price: "55,00$",
+            imgPath: "../../assets/imgs/img/h3-product-img-3a-150x150.png",
+        },
+        {
+            name: "PIZZA TARTUFATA",
+            price: "45,00$",
+            imgPath: "../../assets/imgs/img/h3-product-img-4a-150x150.png",
+        },
+        {
+            name: "FRANCESCANA",
+            price: "25,00$",
+            imgPath: "../../assets/imgs/img/h3-product-img-5a-150x150.png",
+        },
+        {
+            name: "CAMPAGNOLA",
+            price: "50,00$ - 95,00$",
+            imgPath: "../../assets/imgs/img/h3-product-img-6a-100x100.png",
+        },
+    ],
+
 });
