@@ -32,10 +32,10 @@ export default {
         <!-- INNER SLIDER -->
         <div class=" item">
             <div class="dynamic-item mb-1" v-for="(inner, index) in innersArray" :key="index">
-                <p v-if="innerSelector === inner.id">
+                <p v-if="innerSelector === index">
                     {{ inner.text }}
                 </p>
-                <p v-if="innerSelector === inner.id" class="small small-size">
+                <p v-if="innerSelector === index" class="small small-size">
                     {{ inner.dailyBugle }}
                 </p>
             </div>
