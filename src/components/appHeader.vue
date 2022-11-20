@@ -18,11 +18,11 @@ export default {
     },
 
     methods: {
-        prevStep() {
+        prevStepJumbotron() {
             this.store.pizzaSelector < this.store.pizzArray.length - 1 ? this.store.pizzaSelector++ : this.store.pizzaSelector = 0;
         },
 
-        nextStep() {
+        nextStepJumbotron() {
             this.store.pizzaSelector > 0 ? this.store.pizzaSelector-- : this.store.pizzaSelector = this.store.pizzArray.length - 1;
         },
     }
@@ -37,9 +37,10 @@ export default {
 
         <div class="background-img"></div>
 
-        <headerTop :arrayNav="store.navComponents" />
-        <headerJumbo :pizza="store.pizzArray" :pizzaSelector="store.pizzaSelector" @btnPrevClicked="this.prevStep()"
-            @btnNextClicked="this.nextStep()" />
+        <headerTop :arrayNav="this.store.navComponents" :arrayCart="this.store.cartComponents" />
+
+        <headerJumbo :pizza="this.store.pizzArray" :pizzaSelector="this.store.pizzaSelector"
+            @btnPrevClicked="this.prevStepJumbotron()" @btnNextClicked="this.nextStepJumbotron()" />
 
     </header>
 
@@ -48,7 +49,6 @@ export default {
 <style lang="scss" scoped>
 header {
     position: relative;
-    // debug
     min-height: 700px;
 
     .background-logo {

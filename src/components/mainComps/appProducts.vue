@@ -39,7 +39,7 @@ section {
     text-align: center;
 
     .flavour-text {
-        color: $color-brown;
+        color: $color-btns-prev-next;
     }
 
     h2 {

@@ -35,11 +35,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../../styles/partials/variables" as *;
+
 .container {
     width: 100%;
     padding: 2rem 0;
-    // debug
-    color: brown;
 
     .btn {
         cursor: pointer;
@@ -49,6 +49,8 @@ export default {
         padding: 0.5rem 1rem 2rem;
         border-top-left-radius: 50%;
         border-top-right-radius: 50%;
+        color: $color-btns-prev-next;
+        font-weight: 600;
 
 
 

@@ -56,6 +56,21 @@ export const store = reactive({
         },
     ],
 
+    cartComponents: [
+        {
+            id: 0,
+            text: "CART",
+            class: "small-img",
+            imgPath: "../../assets/imgs/svg/svg-1.svg",
+        },
+        {
+            id: 1,
+            text: "SEARCH",
+            classStyle: "search-len small-size",
+            classIcon: "fa-solid fa-magnifying-glass",
+        },
+    ],
+
     arrayRestaurants: [
         {
             id: 0,

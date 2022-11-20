@@ -4,6 +4,7 @@ export default {
 
     props: {
         arrayNav: Array,
+        arrayCart: Array,
     },
 
     methods: {
@@ -43,27 +44,20 @@ export default {
         </nav>
         <!-- /BODY TOP -->
 
+
         <!-- CART/SERCH -->
         <div class="lateral-box dx flex just-end align-center">
             <ul class="flex just-end">
-                <li>
+                <li v-for="(item, index) in arrayCart" :key="index">
                     <a href="">
-                        <span>
-                            <img src="../../assets/imgs/svg/svg-1.svg" class="small-img" alt="">
+                        <span v-if="item.id === 0">
+                            <img :src="item.imgPath" :class="item.class" alt="">
+                        </span>
+                        <span v-if="item.id === 1" :class="item.classStyle">
+                            <i :class="classIcon"></i>
                         </span>
                         <span>
-                            CART
-                        </span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="">
-                        <span class="search-len small-size">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </span>
-                        <span>
-                            SEARCH
+                            {{ item.text }}
                         </span>
                     </a>
                 </li>
@@ -78,7 +72,8 @@ export default {
 @use "../../styles/partials/variables" as *;
 
 .container {
-    width: 80%;
+    width: 90%;
+    max-width: 1250px;
     color: white;
     padding: 1rem 0;
 
