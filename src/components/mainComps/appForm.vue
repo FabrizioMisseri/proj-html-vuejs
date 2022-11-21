@@ -20,7 +20,12 @@ export default {
                 date: "",
                 clock: "",
             };
-        }
+            this.thankCustomer();
+        },
+
+        thankCustomer() {
+            alert("Grazie per aver prenotato con noi");
+        },
     }
 }
 </script>

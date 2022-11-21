@@ -225,4 +225,11 @@ export const store = reactive({
         },
     ],
 
+    arrayFollowUs: [
+        "fa-brands fa-twitter",
+        "fa-brands fa-facebook",
+        "fa-brands fa-instagram",
+        "fa-brands fa-whatsapp",
+    ],
+
 });

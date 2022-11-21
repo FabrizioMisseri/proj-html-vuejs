@@ -30,7 +30,7 @@ export default {
         <nav class="central-box">
             <ul class="flex just-between align-center">
                 <li v-for="(item, index) in arrayNav" :key="index">
-                    <span v-show="item.imgContent">
+                    <span v-show="item.imgContent" class="central-nav-img">
                         <img :src="getImageUrl(arrayNav[index].imgPath)" :class="item.smallImg ? 'small-img' : ''">
                     </span>
 
@@ -51,10 +51,10 @@ export default {
                 <li v-for="(item, index) in arrayCart" :key="index">
                     <a href="">
                         <span v-if="item.id === 0">
-                            <img :src="item.imgPath" :class="item.class" alt="">
+                            <img :src="getImageUrl(item.imgPath)" :class="item.class" alt="">
                         </span>
                         <span v-if="item.id === 1" :class="item.classStyle">
-                            <i :class="classIcon"></i>
+                            <i :class="item.classIcon"></i>
                         </span>
                         <span>
                             {{ item.text }}
@@ -78,7 +78,7 @@ export default {
     padding: 1rem 0;
 
     .lateral-box {
-        width: 25%;
+        width: 20%;
 
         &.dx {
             li {
@@ -88,7 +88,7 @@ export default {
     }
 
     .central-box {
-        width: 50%;
+        width: 60%;
     }
 
     ul {
@@ -113,7 +113,17 @@ export default {
         }
     }
 
+}
 
+@media screen and (max-width: 920px) {
+    .central-box {
+        .central-nav-img {
+            display: none;
+        }
 
+        ul.just-between {
+            justify-content: space-around;
+        }
+    }
 }
 </style>

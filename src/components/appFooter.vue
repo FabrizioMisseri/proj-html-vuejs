@@ -48,10 +48,7 @@ export default {
                     <p class="follow-us small-size">
                         <span class="color-gold">FOLLOW US: </span>
                         <span>
-                            <i class="fa-brands fa-twitter"></i>
-                            <i class="fa-brands fa-facebook"></i>
-                            <i class="fa-brands fa-instagram"></i>
-                            <i class="fa-brands fa-whatsapp"></i>
+                            <i v-for="(social, index) in store.arrayFollowUs" :key="index" :class="social"></i>
                         </span>
                     </p>
                 </div>
