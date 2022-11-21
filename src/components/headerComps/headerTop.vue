@@ -112,6 +112,7 @@ export default {
             display: inline-block;
             background-color: $btn-color-orange;
             padding: .5rem 1.5rem;
+            cursor: pointer;
         }
     }
 
