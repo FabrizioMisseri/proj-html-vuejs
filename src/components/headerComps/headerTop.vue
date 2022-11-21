@@ -73,7 +73,6 @@ export default {
 
 .container {
     width: 90%;
-    max-width: 1250px;
     color: white;
     padding: 1rem 0;
 

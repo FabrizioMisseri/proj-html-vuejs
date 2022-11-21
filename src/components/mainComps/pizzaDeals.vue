@@ -60,6 +60,11 @@ export default {
         </div>
         <!-- / DX -->
 
+        <!-- useless icon -->
+        <div class="useless-icon">
+            <img src="../../assets/imgs/svg/svg-9.svg" alt="">
+        </div>
+
     </section>
 
 </template>
@@ -69,6 +74,9 @@ export default {
 
 .container {
     width: 100%;
+    position: relative;
+    min-height: 200px;
+
 
     .box {
         width: 50%;
@@ -105,6 +113,21 @@ export default {
             .event {
                 width: 85%;
             }
+        }
+    }
+
+    .useless-icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        background-color: white;
+        text-align: center;
+        line-height: 25px;
+
+        img {
+            max-width: 60%;
         }
     }
 }

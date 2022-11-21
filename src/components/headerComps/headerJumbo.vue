@@ -17,27 +17,30 @@ export default {
 </script>
 
 <template>
-    <section class="container flex just-center">
+    <section>
 
-        <small class="btn left small-size" @click="$emit('btnPrevClicked')">
-            PREV
-        </small>
+        <div class="container flex just-center">
 
-        <div>
-            <img :src="getImageUrl(pizza[pizzaSelector])" alt="">
+            <small class="btn left small-size" @click="$emit('btnPrevClicked')">
+                PREV
+            </small>
+
+            <div>
+                <img :src="getImageUrl(pizza[pizzaSelector])" alt="">
+            </div>
+
+            <small class="btn right small-size" @click="$emit('btnNextClicked')">
+                NEXT
+            </small>
+
         </div>
-
-        <small class="btn right small-size" @click="$emit('btnNextClicked')">
-            NEXT
-        </small>
-
     </section>
 </template>
 
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
 
-.container {
+section {
     width: 100%;
     padding: 2rem 0;
 

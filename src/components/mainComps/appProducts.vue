@@ -53,6 +53,11 @@ export default {
         </div>
         <!-- / PRODUCTS -->
 
+        <!-- useless icon -->
+        <div class="useless-icon">
+            <img src="../../assets/imgs/svg/svg-10.svg" alt="">
+        </div>
+
     </section>
 </template>
 
@@ -62,6 +67,8 @@ export default {
 section {
     padding: 3rem 0;
     text-align: center;
+    position: relative;
+    height: 500px;
 
     // TITLE-BOX
     .title-box {
@@ -96,6 +103,13 @@ section {
                 width: 100%;
             }
         }
+    }
+
+    .useless-icon {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 25px;
     }
 }
 
