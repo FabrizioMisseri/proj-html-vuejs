@@ -22,12 +22,18 @@ export default {
 
 <template>
 
-  <appHeader />
-  <appMain />
-  <appFooter />
+  <section class="webpage">
+    <appHeader />
+    <appMain />
+    <appFooter />
+  </section>
 
 </template>
 
 <style lang="scss">
 @use "./styles/general.scss" as *;
+
+.webpage {
+  max-width: 2000px;
+}
 </style>

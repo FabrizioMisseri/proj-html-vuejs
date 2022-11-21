@@ -8,31 +8,33 @@ export default {
 </script>
 
 <template>
+    <section>
 
-    <section class="container flex just-between">
+        <div class="container flex just-between">
 
-        <div class="box">
-            <img src="../../assets/imgs/img/h3-img-1.jpg" alt="">
+            <div class="box">
+                <img src="../../assets/imgs/img/h3-img-1.jpg" alt="">
+            </div>
+
+            <div class="box">
+                <img src="../../assets/imgs/img/h3-img-2.jpg" alt="">
+            </div>
+
+            <div class="box">
+                <img src="../../assets/imgs/img/h3-img-3.jpg" alt="">
+            </div>
+
+            <div class="box">
+                <img src="../../assets/imgs/img/h3-img-4.jpg" alt="">
+            </div>
+
         </div>
-
-        <div class="box">
-            <img src="../../assets/imgs/img/h3-img-2.jpg" alt="">
-        </div>
-
-        <div class="box">
-            <img src="../../assets/imgs/img/h3-img-3.jpg" alt="">
-        </div>
-
-        <div class="box">
-            <img src="../../assets/imgs/img/h3-img-4.jpg" alt="">
-        </div>
-
     </section>
 
 </template>
 
 <style lang="scss" scoped>
-.container {
+section {
     width: 100%;
     padding: .3rem 0;
 

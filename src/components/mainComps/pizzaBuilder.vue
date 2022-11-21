@@ -5,21 +5,23 @@ export default {
 </script>
 
 <template>
+    <section>
 
-    <section class="container">
+        <div class="container">
 
-        <div class="item">
-            <h2>
-                GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE!
-            </h2>
+            <div class="item">
+                <h2>
+                    GO AHEAD AND BUILD YOUR OWN PIZZA WE WON'T JUDGE!
+                </h2>
+            </div>
+
         </div>
-
     </section>
 
 </template>
 
 <style lang="scss" scoped>
-.container {
+section {
     width: 100%;
     color: white;
     position: relative;

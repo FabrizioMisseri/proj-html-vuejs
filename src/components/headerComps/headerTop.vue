@@ -16,55 +16,58 @@ export default {
 </script>
 
 <template>
-    <section class="container flex align-center">
+    <section>
 
-        <!-- BTN -->
-        <div class="lateral-box flex just-start">
-            <a class="btn">
-                ORDER ONLINE
-            </a>
-        </div>
-        <!-- / BTN -->
+        <div class="container flex align-center">
 
-        <!-- BODY TOP -->
-        <nav class="central-box">
-            <ul class="flex just-between align-center">
-                <li v-for="(item, index) in arrayNav" :key="index">
-                    <span v-show="item.imgContent" class="central-nav-img">
-                        <img :src="getImageUrl(arrayNav[index].imgPath)" :class="item.smallImg ? 'small-img' : ''">
-                    </span>
+            <!-- BTN -->
+            <div class="lateral-box flex just-start">
+                <a class="btn">
+                    ORDER ONLINE
+                </a>
+            </div>
+            <!-- / BTN -->
 
-                    <span v-show="arrayNav[index].textContent">
+            <!-- BODY TOP -->
+            <nav class="central-box">
+                <ul class="flex just-between align-center">
+                    <li v-for="(item, index) in arrayNav" :key="index">
+                        <span v-show="item.imgContent" class="central-nav-img">
+                            <img :src="getImageUrl(arrayNav[index].imgPath)" :class="item.smallImg ? 'small-img' : ''">
+                        </span>
+
+                        <span v-show="arrayNav[index].textContent">
+                            <a href="">
+                                {{ item.text }}
+                            </a>
+                        </span>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /BODY TOP -->
+
+
+            <!-- CART/SERCH -->
+            <div class="lateral-box dx flex just-end align-center">
+                <ul class="flex just-end">
+                    <li v-for="(item, index) in arrayCart" :key="index">
                         <a href="">
-                            {{ item.text }}
+                            <span v-if="item.id === 0">
+                                <img :src="getImageUrl(item.imgPath)" :class="item.class" alt="">
+                            </span>
+                            <span v-if="item.id === 1" :class="item.classStyle">
+                                <i :class="item.classIcon"></i>
+                            </span>
+                            <span>
+                                {{ item.text }}
+                            </span>
                         </a>
-                    </span>
-                </li>
-            </ul>
-        </nav>
-        <!-- /BODY TOP -->
+                    </li>
+                </ul>
+            </div>
+            <!-- / CART/SERCH -->
 
-
-        <!-- CART/SERCH -->
-        <div class="lateral-box dx flex just-end align-center">
-            <ul class="flex just-end">
-                <li v-for="(item, index) in arrayCart" :key="index">
-                    <a href="">
-                        <span v-if="item.id === 0">
-                            <img :src="getImageUrl(item.imgPath)" :class="item.class" alt="">
-                        </span>
-                        <span v-if="item.id === 1" :class="item.classStyle">
-                            <i :class="item.classIcon"></i>
-                        </span>
-                        <span>
-                            {{ item.text }}
-                        </span>
-                    </a>
-                </li>
-            </ul>
         </div>
-        <!-- / CART/SERCH -->
-
     </section>
 </template>
 

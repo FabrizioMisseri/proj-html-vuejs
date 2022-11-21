@@ -5,29 +5,32 @@ export default {
 </script>
 
 <template>
-    <section class="container flex">
+    <section>
 
-        <div class="box">
-            <img src="../../assets/imgs/img/h1-team-1a-700x700.jpg" alt="">
+        <div class="container flex">
+
+            <div class="box">
+                <img src="../../assets/imgs/img/h1-team-1a-700x700.jpg" alt="">
+            </div>
+
+            <div class="box">
+                <img src="../../assets/imgs/img/h1-team-2a.jpg" alt="">
+            </div>
+
+            <div class="box">
+                <img src="../../assets/imgs/img/h1-team-3a.jpg" alt="">
+            </div>
+
+            <div class="box">
+                <img src="../../assets/imgs/img/h1-team-4a.jpg" alt="">
+            </div>
+
         </div>
-
-        <div class="box">
-            <img src="../../assets/imgs/img/h1-team-2a.jpg" alt="">
-        </div>
-
-        <div class="box">
-            <img src="../../assets/imgs/img/h1-team-3a.jpg" alt="">
-        </div>
-
-        <div class="box">
-            <img src="../../assets/imgs/img/h1-team-4a.jpg" alt="">
-        </div>
-
     </section>
 </template>
 
 <style lang="scss" scoped>
-.container {
+section {
     margin-top: .3rem;
 
 

@@ -10,61 +10,64 @@ export default {
 
 <template>
 
-    <section class="container flex align-start">
-        <!-- SX -->
-        <div class="box sx">
-            <div class="item">
+    <section>
 
-                <!-- TITLE -->
-                <div class="title">
-                    <span class="brown-font small-size">
-                        MADE WITH LOVE
-                    </span>
-                    <h2>
-                        DELISH PIZZA DEALS
-                    </h2>
+        <div class="container flex align-start">
+            <!-- SX -->
+            <div class="box sx">
+                <div class="item">
+
+                    <!-- TITLE -->
+                    <div class="title">
+                        <span class="brown-font small-size">
+                            MADE WITH LOVE
+                        </span>
+                        <h2>
+                            DELISH PIZZA DEALS
+                        </h2>
+                    </div>
+                    <!-- / TITLE -->
+
+                    <!-- TEXT CONTENT -->
+                    <div class="content">
+                        <ul>
+
+                            <li class="flex" v-for="(deal, index) in arrayDeals" :key="index">
+                                <div class="data">
+                                    <p class="huge-size brown-font">{{ deal.dayEvent }}</p>
+                                    <p>{{ deal.monthEvent }}</p>
+                                </div>
+                                <div class="event">
+                                    <p class="mb-1">
+                                        {{ deal.nameEvent }}
+                                    </p>
+                                    <p class="brown-font small-size">
+                                        <span><i class="fa-solid fa-location-dot"></i></span>
+                                        <span>{{ deal.mapPoint }}</span>
+                                    </p>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- / TEXT CONTENT -->
+
                 </div>
-                <!-- / TITLE -->
-
-                <!-- TEXT CONTENT -->
-                <div class="content">
-                    <ul>
-
-                        <li class="flex" v-for="(deal, index) in arrayDeals" :key="index">
-                            <div class="data">
-                                <p class="huge-size brown-font">{{ deal.dayEvent }}</p>
-                                <p>{{ deal.monthEvent }}</p>
-                            </div>
-                            <div class="event">
-                                <p class="mb-1">
-                                    {{ deal.nameEvent }}
-                                </p>
-                                <p class="brown-font small-size">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>
-                                    <span>{{ deal.mapPoint }}</span>
-                                </p>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-                <!-- / TEXT CONTENT -->
-
             </div>
-        </div>
-        <!-- / SX -->
+            <!-- / SX -->
 
-        <!-- DX -->
-        <div class="box dx">
-            <img src="../../assets/imgs/img/h3-img-5a.jpg" alt="">
-        </div>
-        <!-- / DX -->
+            <!-- DX -->
+            <div class="box dx">
+                <img src="../../assets/imgs/img/h3-img-5a.jpg" alt="">
+            </div>
+            <!-- / DX -->
 
-        <!-- useless icon -->
-        <div class="useless-icon">
-            <img src="../../assets/imgs/svg/svg-9.svg" alt="">
-        </div>
+            <!-- useless icon -->
+            <div class="useless-icon">
+                <img src="../../assets/imgs/svg/svg-9.svg" alt="">
+            </div>
 
+        </div>
     </section>
 
 </template>
@@ -72,7 +75,7 @@ export default {
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
 
-.container {
+section {
     width: 100%;
     position: relative;
     min-height: 200px;

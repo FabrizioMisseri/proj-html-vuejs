@@ -68,7 +68,7 @@ section {
     padding: 3rem 0;
     text-align: center;
     position: relative;
-    height: 500px;
+    min-height: 500px;
 
     // TITLE-BOX
     .title-box {
