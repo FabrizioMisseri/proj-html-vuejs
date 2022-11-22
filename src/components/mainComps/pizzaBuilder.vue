@@ -26,6 +26,12 @@ export default {
         <div class="big-item bottom ct"></div>
         <div class="small-item bottom dx"></div>
 
+
+        <!-- pizza useless icon -->
+        <div class="pizza-useless-icon">
+            <img src="../../assets/imgs/svg/svg-4.svg" alt="">
+        </div>
+
     </section>
 
 </template>
@@ -118,7 +124,9 @@ section {
     }
 
 
-
+    .pizza-useless-icon {
+        bottom: 15%;
+    }
 }
 </style>
 

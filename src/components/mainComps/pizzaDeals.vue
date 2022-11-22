@@ -62,9 +62,14 @@ export default {
             </div>
             <!-- / DX -->
 
+
             <!-- useless icon -->
             <div class="useless-icon">
                 <img src="../../assets/imgs/svg/svg-9.svg" alt="">
+            </div>
+            <!-- pizza useless icon -->
+            <div class="pizza-useless-icon">
+                <img src="../../assets/imgs/svg/svg-4.svg" alt="">
             </div>
 
         </div>
@@ -132,6 +137,10 @@ section {
         img {
             max-width: 60%;
         }
+    }
+
+    .pizza-useless-icon {
+        bottom: 25%;
     }
 }
 

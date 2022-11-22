@@ -26,16 +26,29 @@ export default {
             </div>
 
         </div>
+
+
+        <!-- pizza useless icon -->
+        <div class="pizza-useless-icon">
+            <img src="../../assets/imgs/svg/svg-4.svg" alt="">
+        </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
 section {
     margin-top: .3rem;
+    min-height: 300px;
+    position: relative;
 
 
     .box {
         width: 25%;
+    }
+
+
+    .pizza-useless-icon {
+        bottom: 5%;
     }
 }
 </style>

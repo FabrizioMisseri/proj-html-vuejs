@@ -53,9 +53,14 @@ export default {
         </div>
         <!-- / PRODUCTS -->
 
+
         <!-- useless icon -->
         <div class="useless-icon">
             <img src="../../assets/imgs/svg/svg-10.svg" alt="">
+        </div>
+        <!-- pizza useless icon -->
+        <div class="pizza-useless-icon">
+            <img src="../../assets/imgs/svg/svg-4.svg" alt="">
         </div>
 
     </section>
@@ -74,6 +79,7 @@ section {
     .title-box {
 
         width: 30%;
+        margin-bottom: 5rem;
 
         .flavour-text {
             color: $color-btns-prev-next;
@@ -110,6 +116,11 @@ section {
         bottom: 0;
         right: 0;
         width: 25px;
+    }
+
+
+    .pizza-useless-icon {
+        top: 30%;
     }
 }
 

@@ -37,6 +37,22 @@ img {
     margin: 0 auto;
 }
 
+.pizza-useless-icon {
+    position: absolute;
+    right: 1%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+
+    img {
+        width: 40%;
+    }
+}
+
 
 // UTILITIES
 

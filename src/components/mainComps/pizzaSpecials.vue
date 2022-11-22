@@ -10,7 +10,7 @@ export default {
 
 <template>
 
-    <section class="container flex">
+    <section class="flex">
 
         <!-- IMG SX BOX -->
         <div class="box-sx">
@@ -52,6 +52,11 @@ export default {
         </div>
         <!-- / TEXT DX BOX -->
 
+        <!-- pizza useless icon -->
+        <div class="pizza-useless-icon">
+            <img src="../../assets/imgs/svg/svg-4.svg" alt="">
+        </div>
+
     </section>
 
 </template>
@@ -59,10 +64,11 @@ export default {
 <style lang="scss" scoped>
 @use "../../styles/partials/variables" as *;
 
-.container {
+section {
     width: 100%;
     padding: .3rem 0;
     min-height: 500px;
+    position: relative;
 
     .box-dx,
     .box-sx {
@@ -116,6 +122,10 @@ export default {
                 }
             }
         }
+    }
+
+    .pizza-useless-icon {
+        bottom: 15%;
     }
 }
 </style>
