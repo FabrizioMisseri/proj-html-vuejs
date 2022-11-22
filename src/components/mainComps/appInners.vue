@@ -134,7 +134,8 @@ section {
         .double-apex {
             font-size: 4rem;
             color: $color-gold;
-            transform: rotate(-0.25turn);
+            position: relative;
+            transform: rotate(90deg);
         }
     }
 
